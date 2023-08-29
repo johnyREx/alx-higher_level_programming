@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-"""This module contains a 'square class'
+"""This module contains a `square class`
 """
 
 
 class Square:
     """The Square class
     """
-
 
     def __init__(self, size=0, position=(0, 0)):
         """_summary_
@@ -19,25 +18,25 @@ class Square:
         self.size = size
         self.position = position
 
-        def area(self):
-            """Computes the area of the the Square
+    def area(self):
+        """Computes the area of the Square
 
-            Returns:
-                int: The area of the square
-            """
-            return self.__size ** 2
+        Returns:
+            int: The area of the square
+        """
+        return self.__size ** 2
 
-        @property
-        def size(self):
-            """The 'size' getter
+    @property
+    def size(self):
+        """The `size` getter
 
-            Returns:
-                int: The of the square
-                """
-                return self.__size
+        Returns:
+            int: The size of the square
+        """
+        return self.__size
 
-            @size.setter
-            def size(self, size):
+    @size.setter
+    def size(self, size):
         """The `size` setter
 
         Args:
