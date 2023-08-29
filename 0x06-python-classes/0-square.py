@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-"""Defines a class Square."""
+"""This module defines a `square class`
+"""
 
 
 class Square:
-    """Represent a square."""
+    """The square class
+    """
     pass
+
 
 if __name__ == "__main__":
     my_square = Square()
