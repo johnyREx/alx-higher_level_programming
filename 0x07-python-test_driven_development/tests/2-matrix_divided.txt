@@ -1,0 +1,73 @@
+The ``2-matrix_divided`` module
+===============================
+
+Using ``matrix_divided``
+------------------------
+
+Importing the function
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Check module and function has doc-string
+	>>> len(__import__('2-matrix_divided').__doc__) > 1
+	True
+	>>> len(__import__('2-matrix_divided').matrix_divided.__doc__) > 1
+	True
+
+
+Check ``matrix`` is of the correct type
+	>>> matrix_divided(3, 4)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+Check ``matrix`` is a list of lists
+	>>> matrix_divided([], 4)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> matrix_divided([4], 4)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> matrix_divided([[4], True], 4)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+Check ``matrix`` is a list of lists of numbers
+	>>> matrix_divided([[3,5,'6']], 4)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+Check rows in ``matrix`` have the same size
+	>>> matrix_divided([[1,2,3],[4,5]], 3)
+	Traceback (most recent call last):
+	...
+	TypeError: Each row of the matrix must have the same size
+
+Check ``div`` must be integer and not zero
+	>>> matrix_divided([[1],[2]], True)
+	Traceback (most recent call last):
+	...
+	TypeError: div must be a number
+
+	>>> matrix_divided([[1],[2]], 0)
+	Traceback (most recent call last):
+	...
+	ZeroDivisionError: division by zero
+
+Check correct output
+	>>> matrix = [[1,2,3],[4,5,6]]
+	>>> new_matrix = matrix_divided(matrix, 3)
+	>>> new_matrix
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Check original matrix is not changed
+	>>> [[id(matrix[i][j]) == id(new_matrix[i][j]) for j in range(3)] for i in range(2)]
+	[[False, False, False], [False, False, False]]

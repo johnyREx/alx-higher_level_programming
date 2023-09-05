@@ -1,0 +1,31 @@
+The ``3-say_my_name`` module
+==========================
+
+Using ``say_my_name``
+---------------------
+
+Import the function
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Check that both module and function has doc
+	>>> len(__import__('3-say_my_name').__doc__) > 1
+	True
+	>>> len(__import__('3-say_my_name').say_my_name.__doc__) > 1
+	True
+
+Check ``first_name`` and ``last_name`` are strings
+	>>> say_my_name(1)
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+	>>> say_my_name('Adam', 1)
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+
+Check correct result
+	>>> say_my_name('Peter', 'Parker')
+	Peter Parker
+	>>> #The output should have a trailing white space when ``last_name`` is not passed
+	>>> say_my_name('Peter')
+	Peter 
