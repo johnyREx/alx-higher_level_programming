@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 """
-Return the JSON of object
+converts objext to json
+Uses json
 """
-
 
 import json
 
 
-def to_json_string(my_obj):
+def to_json_string(myobj):
     """
-    converts my_obj to json
+    Convert myobj to json
     """
-return(json.dumps(my_obj))
+
+return(json.dumps(myobj))
