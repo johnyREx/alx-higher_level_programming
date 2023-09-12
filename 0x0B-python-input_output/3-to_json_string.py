@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-converts objext to json
+Converts object to json
 Uses json
 """
 
@@ -11,5 +11,4 @@ def to_json_string(myobj):
     """
     Convert myobj to json
     """
-
-return(json.dumps(myobj))
+    return(json.dumps(myobj))
