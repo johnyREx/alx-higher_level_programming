@@ -12,5 +12,4 @@ def from_json_string(mystr):
     """
     Converts mystr
     """
-   
-   return(json.loads(mystr))
+    return(json.loads(mystr))
