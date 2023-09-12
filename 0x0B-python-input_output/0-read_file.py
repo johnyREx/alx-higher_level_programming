@@ -24,5 +24,6 @@ def read_file(filename=""):
     except FileNotFoundError:
         pass
 
+
 if __name__ == "__main__":
     read_file()
