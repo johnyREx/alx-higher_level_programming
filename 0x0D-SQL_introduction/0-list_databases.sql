@@ -1,1 +1,2 @@
-cat list_database.sql | mysql -localhost -uroot -p
+-- list all databases in MySQL server.
+SHOW DATABASES
